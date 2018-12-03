@@ -53,12 +53,37 @@ app.post('/switchMain', (req, res, next) => {
   console.log(state.switchMain);
 });
 
+app.post('/switchedMain', (req, res, next) => {
+  state.switchMain = 0;
+  console.log(state.switchMain);
+});
+
 app.post('/heightAdjust', (req, res, next) => {
   state.heightAdjust = 1;
   console.log(state.heightAdjust);
 });
 
+app.post('/heightAdjusted', (req, res, next) => {
+  state.heightAdjust = 0;
+  console.log(state.heightAdjust);
+});
+
+app.post('/collided', (req, res, next) => {
+  state.collisionDetect = 1;
+  console.log(state.heightAdjust);
+});
+
+app.post('/uncollided', (req, res, next) => {
+  state.collisionDetect = 0;
+  console.log(state.heightAdjust);
+});
+
 app.post('/homeSet', (req, res, next) => {
   state.homeSet = 1;
+  console.log(state.homeSet);
+});
+
+app.post('/homeSetted', (req, res, next) => {
+  state.homeSet = 0;
   console.log(state.homeSet);
 });
